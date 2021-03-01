@@ -20,3 +20,6 @@ class Cli
         "
         puts "Welcome young padawan"
         puts "To View Star Wars Character, enter 'characters'"
+        puts "To leave, enter 'exit'"
+        menu
+    end
