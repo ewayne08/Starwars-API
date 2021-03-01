@@ -18,3 +18,5 @@ class Cli
             .           .      S T A R   W A R S      .       .      .
                 .         .          .     .      .     .       .        .
         "
+        puts "Welcome young padawan"
+        puts "To View Star Wars Character, enter 'characters'"
