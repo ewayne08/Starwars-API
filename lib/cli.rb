@@ -78,4 +78,14 @@ class Cli
         puts "Name: #{person.name}"
         puts "Gender: #{person.gender}"
         puts "Birth Year: #{person.birth_year}"
+    end
+
+    def goodbye
+        puts "May the force be with you"
+    end
+
+    def invalid_entry
+        puts "invalid entry, try again"
+    end
+end
 
