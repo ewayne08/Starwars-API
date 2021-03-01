@@ -63,3 +63,7 @@ class Cli
         character_selection(input)
     end
 
+    def character_selection(character)
+        person = Characters.find_by_name(character)
+        input = character.to_i 
+
