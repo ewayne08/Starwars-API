@@ -23,3 +23,18 @@ class Cli
         puts "To leave, enter 'exit'"
         menu
     end
+
+    def menu 
+        input = gets.strip.downcase
+        if input == "characters"
+            Api.create_characters
+            character_list
+            menu2
+        elsif input == "exit"
+            goodbye
+        else
+            invalid_entry
+            menu
+        end
+    end
+
