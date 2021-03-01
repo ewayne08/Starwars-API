@@ -67,3 +67,10 @@ class Cli
         person = Characters.find_by_name(character)
         input = character.to_i 
 
+        if person == nil && !(1...10).include?(input)
+            invalid_entry
+        elsif person == nil && (1...10).include?(input)
+            person = Characters.all[input -1]
+            # binding.pry
+        end
+
