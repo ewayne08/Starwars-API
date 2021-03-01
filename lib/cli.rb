@@ -74,3 +74,8 @@ class Cli
             # binding.pry
         end
 
+        person.update_character #ideally, would incorporate a 'check' to see if info is already there (if someone asks for Luke twice)
+        puts "Name: #{person.name}"
+        puts "Gender: #{person.gender}"
+        puts "Birth Year: #{person.birth_year}"
+
