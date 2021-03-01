@@ -38,3 +38,16 @@ class Cli
         end
     end
 
+    def menu2
+        puts "Would you like to see another character? y or n"
+        input = gets.strip.downcase
+        if input == "y"
+            character_list
+            menu2
+        elsif input == "n"
+            goodbye
+        else 
+            invalid_entry
+        end
+    end
+
