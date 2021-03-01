@@ -51,3 +51,15 @@ class Cli
         end
     end
 
+    def character_list
+        Characters.all.each_with_index do |character, index|
+            puts "#{index + 1}. #{character.name}"
+        end
+        puts ""
+        puts ""
+        puts "which character would you like to learn about? Enter Name:"
+        input = gets.strip.downcase
+
+        character_selection(input)
+    end
+
