@@ -1,1 +1,2 @@
 # Starwars-API
+Welcome to my CLI project. This is a neat little program I made using a Star Wars API. To run the program open your terminal and type bin/run. You'll then have to type in "characters" and will recieve a list of characters to choose from. To exit the program type exit. 

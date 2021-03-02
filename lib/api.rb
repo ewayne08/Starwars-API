@@ -4,11 +4,7 @@ require 'pry'
 require_relative './characters.rb'
 class Api 
 
-    # attr_accessor :query
-
-    # def initialize
-    #     @query = query
-    # end
+   
 
     def self.fetch_characters
         
@@ -30,7 +26,7 @@ class Api
         # binding.pry
     end
 
-    def self.create_characters #displays list of characters 1-10
+    def self.create_characters 
         character = fetch_characters
    
         character["results"].each{|character| Characters.new(character["name"], character["url"])}
@@ -42,46 +38,4 @@ end
 
 
  
-    # def display_character #displays a selected characters' name, gender, and birth year
-    #     info = update_character
-    #     info["results"].each{|info| Characters.new(info["name"], info["gender"], info["birth year"])}
-    # end
     
-# binding.pry
-#index0 of Characters.all
-
-
-        
-    # I now have to create a new method that TAKES the information 
-    #     we've just obtained about characters, one character at a time, and include another api request (uri=code snippet) 
-    #     to request their individual profile URLs and pull the info
-    #      we want from those pages (gender, birth year). Then we want to finish by actually displaying that data
-
-          # url = "https://www.swapi.tech/api/people/#{input}"
-        # input = gets.chomp
-
-      
-        # case input
-        # when "1"
-        #     url = "https://www.swapi.tech/api/people/1"
-        # when "2"
-        #     url = "https://www.swapi.tech/api/people/2"
-        # when "3"
-        #     url = "https://www.swapi.tech/api/people/3"
-        # when "4"
-        #     url = "https://www.swapi.tech/api/people/4"
-        # when "5"
-        #     url = "https://www.swapi.tech/api/people/5"
-        # when "6"
-        #     url = "https://www.swapi.tech/api/people/6"
-        # when "7"
-        #     url = "https://www.swapi.tech/api/people/7"
-        # when "8"
-        #     url = "https://www.swapi.tech/api/people/8"
-        # when "9"
-        #     url = "https://www.swapi.tech/api/people/9"
-        # when "10"
-        #     url = "https://www.swapi.tech/api/people/10"
-        # else 
-        #     url = "https://www.swapi.tech/api/people/#{query}"
-        # end

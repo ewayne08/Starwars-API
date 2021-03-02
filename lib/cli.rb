@@ -1,4 +1,5 @@
 #this is what communicates with the user, controller
+#input is gets
 require 'pry'
 
 class Cli  
@@ -21,36 +22,36 @@ class Cli
         puts "Welcome young padawan"
         puts "To View Star Wars Character, enter 'characters'"
         puts "To leave, enter 'exit'"
-        menu
+        list
     end
 
-    def menu 
+    def list 
         input = gets.strip.downcase
         if input == "characters"
             Api.create_characters
             character_list
-            menu2
+            list2
         elsif input == "exit"
             goodbye
         else
             invalid_entry
-            menu
+            list
         end
     end
 
-    def menu2
+    def list2
         puts "Would you like to see another character? y or n"
         input = gets.strip.downcase
         if input == "y"
             character_list
-            menu2
+            list2
         elsif input == "n"
             goodbye
         else 
             invalid_entry
         end
     end
-
+    
     def character_list
         Characters.all.each_with_index do |character, index|
             puts "#{index + 1}. #{character.name}"
@@ -65,7 +66,7 @@ class Cli
 
     def character_selection(character)
         person = Characters.find_by_name(character)
-        input = character.to_i 
+        input = character.to_i #takes input changes to integer
 
         if person == nil && !(1...10).include?(input)
             invalid_entry
