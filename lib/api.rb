@@ -21,7 +21,7 @@ class Api
   
         uri = URI(url)
         response = Net::HTTP.get(uri)
-        characters = JSON.parse(response)
+        characters = JSON.parse(response) #changes data into readable format
         characters["result"]["properties"]
         # binding.pry
     end
@@ -29,7 +29,7 @@ class Api
     def self.create_characters 
         character = fetch_characters
    
-        character["results"].each{|character| Characters.new(character["name"], character["url"])}
+        character["results"].each{|character| Characters.new(character["name"], character["url"])} #short form of iteration
     end
 
 
